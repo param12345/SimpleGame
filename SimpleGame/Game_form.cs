@@ -42,5 +42,15 @@ namespace SimpleGame
             btn_spin.Enabled = false;
             Btn_shoot.Enabled = false;
         }
+
+        private void Btn_Exit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void Btn_Rules_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -34,6 +34,7 @@
             this.PicBox_Main = new System.Windows.Forms.PictureBox();
             this.Btn_Exit = new System.Windows.Forms.Button();
             this.Btn_PlayAgain = new System.Windows.Forms.Button();
+            this.Btn_Rules = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.PicBox_Main)).BeginInit();
             this.SuspendLayout();
             // 
@@ -82,6 +83,7 @@
             this.Btn_Exit.TabIndex = 4;
             this.Btn_Exit.Text = "Exit";
             this.Btn_Exit.UseVisualStyleBackColor = true;
+            this.Btn_Exit.Click += new System.EventHandler(this.Btn_Exit_Click);
             // 
             // Btn_PlayAgain
             // 
@@ -93,12 +95,23 @@
             this.Btn_PlayAgain.UseVisualStyleBackColor = true;
             this.Btn_PlayAgain.Click += new System.EventHandler(this.Btn_PlayAgain_Click);
             // 
+            // Btn_Rules
+            // 
+            this.Btn_Rules.Location = new System.Drawing.Point(653, 324);
+            this.Btn_Rules.Name = "Btn_Rules";
+            this.Btn_Rules.Size = new System.Drawing.Size(75, 49);
+            this.Btn_Rules.TabIndex = 6;
+            this.Btn_Rules.Text = "Rules";
+            this.Btn_Rules.UseVisualStyleBackColor = true;
+            this.Btn_Rules.Click += new System.EventHandler(this.Btn_Rules_Click);
+            // 
             // Game_form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.Btn_Rules);
             this.Controls.Add(this.Btn_PlayAgain);
             this.Controls.Add(this.Btn_Exit);
             this.Controls.Add(this.PicBox_Main);
@@ -121,6 +134,7 @@
         private System.Windows.Forms.PictureBox PicBox_Main;
         private System.Windows.Forms.Button Btn_Exit;
         private System.Windows.Forms.Button Btn_PlayAgain;
+        private System.Windows.Forms.Button Btn_Rules;
     }
 }
 
