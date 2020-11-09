@@ -50,7 +50,9 @@ namespace SimpleGame
 
         private void Btn_Rules_Click(object sender, EventArgs e)
         {
-
+            Game_Rules rules_obj = new Game_Rules();
+            rules_obj.Show();
+            this.Hide();
         }
     }
 }

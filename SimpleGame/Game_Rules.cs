@@ -16,5 +16,12 @@ namespace SimpleGame
         {
             InitializeComponent();
         }
+
+        private void btn_back_Click(object sender, EventArgs e)
+        {
+            Game_form game_obj = new Game_form();
+            game_obj.Show();
+            this.Close();
+        }
     }
 }
