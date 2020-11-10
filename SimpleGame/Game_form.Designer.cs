@@ -72,6 +72,7 @@
             this.PicBox_Main.Location = new System.Drawing.Point(180, 63);
             this.PicBox_Main.Name = "PicBox_Main";
             this.PicBox_Main.Size = new System.Drawing.Size(386, 200);
+            this.PicBox_Main.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.PicBox_Main.TabIndex = 3;
             this.PicBox_Main.TabStop = false;
             // 

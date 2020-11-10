@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -28,12 +30,32 @@ namespace SimpleGame
         {
             btn_spin.Enabled = true;
             btn_load.Enabled = false;
+
+            //code to display image in picture box on button click  
+
+            Assembly myAssembly = Assembly.GetExecutingAssembly();
+
+            Stream myStream = myAssembly.GetManifestResourceStream("SimpleGame.Resources.welcome.jpeg");
+
+            Bitmap bmp_Object = new Bitmap(myStream);
+
+            PicBox_Main.Image = bmp_Object;
         }
 
         private void btn_spin_Click(object sender, EventArgs e)
         {
             Btn_shoot.Enabled = true;
             btn_spin.Enabled = false;
+
+            //code to display image in picture box on button click  
+
+            Assembly myAssembly = Assembly.GetExecutingAssembly();
+
+            Stream myStream = myAssembly.GetManifestResourceStream("SimpleGame.Resources.shoot.gif");
+
+            Bitmap bmp_Object = new Bitmap(myStream);
+
+            PicBox_Main.Image = bmp_Object;
         }
 
         private void Btn_PlayAgain_Click(object sender, EventArgs e)
