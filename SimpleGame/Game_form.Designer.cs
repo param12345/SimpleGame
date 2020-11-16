@@ -66,6 +66,7 @@
             this.Btn_shoot.TabIndex = 2;
             this.Btn_shoot.Text = "Shoot";
             this.Btn_shoot.UseVisualStyleBackColor = true;
+            this.Btn_shoot.Click += new System.EventHandler(this.Btn_shoot_Click);
             // 
             // PicBox_Main
             // 

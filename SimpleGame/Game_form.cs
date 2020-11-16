@@ -38,10 +38,6 @@ namespace SimpleGame
             Bitmap bmp_Object = new Bitmap(myStream);
             PicBox_Main.Image = bmp_Object;
 
-            // Sound code
-            System.Media.SoundPlayer Sound_Object = new System.Media.SoundPlayer(SimpleGame.Properties.Resources.shoot1);
-            Sound_Object.Play();
-
             game_object.load_data = 1;
         }
 
@@ -63,6 +59,23 @@ namespace SimpleGame
             MessageBox.Show("Bullet Position after spining the chamber is "+ game_object.spin_data.ToString());
         }
 
+        private void Btn_shoot_Click(object sender, EventArgs e)
+        {
+            //logic 
+            game_object.shoot_data = game_object.shoot_method();
+            if(game_object.shoot_data ==1)
+            {
+                // Sound code
+                System.Media.SoundPlayer Sound_Object = new System.Media.SoundPlayer(SimpleGame.Properties.Resources.shoot1);
+                Sound_Object.Play();
+                MessageBox.Show("Bullet shot on your head. You are dead");
+            }
+            else
+            {
+                MessageBox.Show("emply shoot");
+            }
+        }
+
         private void Btn_PlayAgain_Click(object sender, EventArgs e)
         {
             btn_load.Enabled = true;
@@ -81,5 +94,7 @@ namespace SimpleGame
             rules_obj.Show();
             this.Hide();
         }
+
+        
     }
 }
