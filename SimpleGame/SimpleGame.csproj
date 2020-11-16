@@ -58,6 +58,7 @@
     <Compile Include="Game_form.Designer.cs">
       <DependentUpon>Game_form.cs</DependentUpon>
     </Compile>
+    <Compile Include="Game_logic.cs" />
     <Compile Include="Game_Rules.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -100,6 +101,9 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Resources\shoot.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\shoot.wav" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -14,6 +14,7 @@ namespace SimpleGame
 {
     public partial class Game_form : Form
     {
+        Game_logic game_object = new Game_logic();
         public Game_form()
         {
             InitializeComponent();
@@ -32,14 +33,16 @@ namespace SimpleGame
             btn_load.Enabled = false;
 
             //code to display image in picture box on button click  
-
             Assembly myAssembly = Assembly.GetExecutingAssembly();
-
             Stream myStream = myAssembly.GetManifestResourceStream("SimpleGame.Resources.welcome.jpeg");
-
             Bitmap bmp_Object = new Bitmap(myStream);
-
             PicBox_Main.Image = bmp_Object;
+
+            // Sound code
+            System.Media.SoundPlayer Sound_Object = new System.Media.SoundPlayer(SimpleGame.Properties.Resources.shoot1);
+            Sound_Object.Play();
+
+            game_object.load_data = 1;
         }
 
         private void btn_spin_Click(object sender, EventArgs e)
@@ -50,12 +53,14 @@ namespace SimpleGame
             //code to display image in picture box on button click  
 
             Assembly myAssembly = Assembly.GetExecutingAssembly();
-
             Stream myStream = myAssembly.GetManifestResourceStream("SimpleGame.Resources.shoot.gif");
-
             Bitmap bmp_Object = new Bitmap(myStream);
-
             PicBox_Main.Image = bmp_Object;
+
+            Random Rnd_obj = new Random();
+            game_object.spin_data = Rnd_obj.Next(1, 7);
+
+            MessageBox.Show("Bullet Position after spining the chamber is "+ game_object.spin_data.ToString());
         }
 
         private void Btn_PlayAgain_Click(object sender, EventArgs e)
