@@ -35,6 +35,7 @@
             this.Btn_Exit = new System.Windows.Forms.Button();
             this.Btn_PlayAgain = new System.Windows.Forms.Button();
             this.Btn_Rules = new System.Windows.Forms.Button();
+            this.btn_ShootAway = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.PicBox_Main)).BeginInit();
             this.SuspendLayout();
             // 
@@ -50,7 +51,7 @@
             // 
             // btn_spin
             // 
-            this.btn_spin.Location = new System.Drawing.Point(316, 324);
+            this.btn_spin.Location = new System.Drawing.Point(241, 324);
             this.btn_spin.Name = "btn_spin";
             this.btn_spin.Size = new System.Drawing.Size(75, 49);
             this.btn_spin.TabIndex = 1;
@@ -60,7 +61,7 @@
             // 
             // Btn_shoot
             // 
-            this.Btn_shoot.Location = new System.Drawing.Point(500, 324);
+            this.Btn_shoot.Location = new System.Drawing.Point(379, 324);
             this.Btn_shoot.Name = "Btn_shoot";
             this.Btn_shoot.Size = new System.Drawing.Size(75, 49);
             this.Btn_shoot.TabIndex = 2;
@@ -107,12 +108,23 @@
             this.Btn_Rules.UseVisualStyleBackColor = true;
             this.Btn_Rules.Click += new System.EventHandler(this.Btn_Rules_Click);
             // 
+            // btn_ShootAway
+            // 
+            this.btn_ShootAway.Location = new System.Drawing.Point(491, 324);
+            this.btn_ShootAway.Name = "btn_ShootAway";
+            this.btn_ShootAway.Size = new System.Drawing.Size(75, 49);
+            this.btn_ShootAway.TabIndex = 7;
+            this.btn_ShootAway.Text = "Shoot Away";
+            this.btn_ShootAway.UseVisualStyleBackColor = true;
+            this.btn_ShootAway.Click += new System.EventHandler(this.btn_ShootAway_Click);
+            // 
             // Game_form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btn_ShootAway);
             this.Controls.Add(this.Btn_Rules);
             this.Controls.Add(this.Btn_PlayAgain);
             this.Controls.Add(this.Btn_Exit);
@@ -137,6 +149,7 @@
         private System.Windows.Forms.Button Btn_Exit;
         private System.Windows.Forms.Button Btn_PlayAgain;
         private System.Windows.Forms.Button Btn_Rules;
+        private System.Windows.Forms.Button btn_ShootAway;
     }
 }
 

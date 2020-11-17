@@ -44,6 +44,7 @@ namespace SimpleGame
         private void btn_spin_Click(object sender, EventArgs e)
         {
             Btn_shoot.Enabled = true;
+            btn_ShootAway.Enabled = true;
             btn_spin.Enabled = false;
 
             //code to display image in picture box on button click  
@@ -76,6 +77,36 @@ namespace SimpleGame
             }
         }
 
+        private void btn_ShootAway_Click(object sender, EventArgs e)
+        {
+            if (game_object.chances <= 2)
+            {
+                game_object.shoot_data = game_object.shoot_method();
+                if (game_object.shoot_data == 1)
+                {
+                    // Sound code
+                    System.Media.SoundPlayer Sound_Object = new System.Media.SoundPlayer(SimpleGame.Properties.Resources.shoot1);
+                    Sound_Object.Play();
+                    MessageBox.Show("Wow!! you are safe. you win the game");
+                    Btn_shoot.Enabled = false;
+                    btn_ShootAway.Enabled = false;
+                }
+                else
+                {
+                    game_object.chances++;
+                    if(game_object.chances== 2)
+                    {
+                        MessageBox.Show("Your 2 chances are finished. you lose the game");
+                    }
+                    else
+                    {
+                        MessageBox.Show("emply shoot");
+                    }
+                }
+                
+            }
+        }
+
         private void Btn_PlayAgain_Click(object sender, EventArgs e)
         {
             btn_load.Enabled = true;
@@ -95,6 +126,6 @@ namespace SimpleGame
             this.Hide();
         }
 
-        
+       
     }
 }

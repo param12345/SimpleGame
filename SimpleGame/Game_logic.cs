@@ -11,7 +11,8 @@ namespace SimpleGame
         public int load_data { get; set; }
         public int spin_data { get; set; }
         public int shoot_data { get; set; }
-
+        public int shootaway_data { get; set; }
+        public int chances = 0;
         public int shoot_method()
         {
             if(load_data == spin_data)
